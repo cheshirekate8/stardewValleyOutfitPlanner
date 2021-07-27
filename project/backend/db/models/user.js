@@ -39,7 +39,10 @@ module.exports = (sequelize, DataTypes) => {
     };
     static associate(models) {
       // this.hasOne(models.Outfit, {foreignKey: 'userId', sourceKey:'id'})
-      // User.Outfit = User.hasOne(Outfit)
+      User.hasOne(models.Outfit),
+      User.hasMany(models.Comment, {
+        foreignKey: 'userId'
+      })
     }
   };
   User.init(

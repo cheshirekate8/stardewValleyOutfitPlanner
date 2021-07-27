@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Accent.hasMany(models.Outfit, {
+        foreignKey: 'accentId'
+      })
     }
   };
   Accent.init({

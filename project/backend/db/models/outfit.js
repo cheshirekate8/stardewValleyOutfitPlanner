@@ -11,7 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // this.belongsTo(models.User, {foreignKey: 'userId', targetKey:'id'})
-      // Outfit.belongsTo(User)
+      Outfit.belongsTo(models.User),
+      Outfit.hasMany(models.Comment, {
+        foreignKey: 'outfitId'
+      })
     }
   };
   Outfit.init({

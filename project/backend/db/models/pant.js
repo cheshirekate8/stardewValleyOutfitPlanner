@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Pant.hasMany(models.Outfit, {
+        foreignKey: 'pantId'
+      })
     }
   };
   Pant.init({
