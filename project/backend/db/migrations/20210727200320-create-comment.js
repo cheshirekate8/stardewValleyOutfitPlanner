@@ -18,6 +18,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: 'Outfits'}
       },
+      comment: {
+        allowNull: false,
+        type: Sequelize.TEXT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
