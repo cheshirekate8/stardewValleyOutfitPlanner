@@ -13,4 +13,16 @@ router.get(
   }),
 )
 
+router.get(
+  '/bodies/:id',
+  asyncHandler(async (req, res) => {
+    const bodies = await Body.findAll({
+        where: {
+          id: req.params.id
+        }
+      });
+    return res.json(bodies)
+  }),
+)
+
 module.exports = router;
