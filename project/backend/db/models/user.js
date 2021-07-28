@@ -38,7 +38,6 @@ module.exports = (sequelize, DataTypes) => {
       return await User.scope('currentUser').findByPk(user.id);
     };
     static associate(models) {
-      // this.hasOne(models.Outfit, {foreignKey: 'userId', sourceKey:'id'})
       User.hasOne(models.Outfit),
       User.hasMany(models.Comment, {
         foreignKey: 'userId'
