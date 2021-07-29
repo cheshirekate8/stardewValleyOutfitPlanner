@@ -1,6 +1,27 @@
+#bodyImg {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 16;
+    grid-row-start: 1;
+    grid-row-end: 32;
+
+}
+
+#shirtImg {
+    display: grid;
+    grid-row-start: 15;
+    grid-row-end: 32;
+    grid-column-start: 5;
+}
+
+#pantsImg {
+    display: grid;
+    grid-row-start: 23;
+    grid-column-start: 3;
+}
+
 #bodyTest {
-    width: 16px;
-    height: 32px;
-    background: url("../../characterSheets/farmer_base.png") 0 0;
-    /* background-size: cover; */
+    display: grid;
+    grid-template-columns: repeat(16, 25px);
+    grid-template-rows: repeat(32, 25px);
 }
